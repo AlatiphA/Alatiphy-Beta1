@@ -125,7 +125,10 @@
   `;
   document.head.appendChild(style);
 
-  const INSTALL_KEY = "pwa_install_dismissed";
+
+/* DURATION_KEY - Change when creating a beta */
+  const INSTALL_KEY = "alatiphy_beta_install_dismissed";
+
   const dismissed =
     localStorage.getItem(INSTALL_KEY);
 
