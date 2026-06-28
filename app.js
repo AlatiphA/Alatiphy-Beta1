@@ -1318,155 +1318,129 @@ function showAbout() {
 
   DOM.list.innerHTML = `
     <div style="padding:15px; line-height:1.6;">
-      <h3>Alatiphy - AlatiphA Music</h3>
+      <section class="about-content">
 
+        <h1>Alatiphy - AlatiphA Music</h1>
 
+        <p>Alatiphy is a progressive web app (PWA) music player for streaming and offline listening to AlatiphA's original tracks.</p>
+        <p>With Alatiphy, it's easy to listen to tailored online and offline music on your phone, your computer, your tablet and many more devices.</p>
 
+        <h2>Features</h2>
 
-<section class="about-content">
-  <h1>Alatiphy - Music Player</h1>
+        <h3>Playback</h3>
+        <ul>
+          <li>Play, pause, skip to next/previous track</li>
+          <li>Seek bar with click and drag support (mouse and touch)</li>
+          <li>Real-time playback time display (current / total)</li>
+          <li>Next track preloading for smooth transitions</li>
+          <li>Restores the last played track and playback position on relaunch</li>
+        </ul>
 
-  <p>
-    A Progressive Web App (PWA) music player for streaming and offline listening
-    to AlatiphA's original tracks, built with vanilla HTML, CSS, and JavaScript,
-    and hosted on GitHub Pages.
-  </p>
+        <h3>Repeat &amp; Shuffle</h3>
+        <ul>
+          <li><strong>Repeat Off</strong> — Plays through the playlist once and stops</li>
+          <li><strong>Repeat One</strong> — Loops the current track indefinitely</li>
+          <li><strong>Repeat All</strong> — Loops the entire playlist</li>
+          <li><strong>Shuffle</strong> — Randomly selects the next track without repeating the current one</li>
+        </ul>
 
-  <h2>Features</h2>
+        <h3>Volume &amp; Mute</h3>
+        <ul>
+          <li>Volume slider with persistent state across sessions</li>
+          <li>Mute/unmute toggle with icon feedback</li>
+          <li>Volume and mute state saved to localStorage</li>
+        </ul>
 
-  <h3>Playback</h3>
-  <ul>
-    <li>Play, pause, skip to next/previous track</li>
-    <li>Seek bar with click and drag support (mouse and touch)</li>
-    <li>Real-time playback time display (current / total)</li>
-    <li>Next track preloading for smooth transitions</li>
-    <li>Restores the last played track and playback position on relaunch</li>
-  </ul>
+        <h3>Song List &amp; Playlists</h3>
+        <ul>
+          <li>Filter tabs: <strong>All Songs</strong>, <strong>Recently Added</strong>, <strong>Rap</strong>, <strong>R&amp;B</strong>, <strong>Remix</strong>, <strong>Afrobeats</strong></li>
+          <li><strong>Favorites</strong> tab to save songs across sessions</li>
+          <li>Song duration displayed per track and cached after first scan</li>
+          <li>Active track highlighted and automatically scrolled into view</li>
+        </ul>
 
-  <h3>Repeat &amp; Shuffle</h3>
-  <ul>
-    <li><strong>Repeat Off</strong> - Plays through the playlist once and stops</li>
-    <li><strong>Repeat One</strong> - Loops the current track indefinitely</li>
-    <li><strong>Repeat All</strong> - Loops the entire playlist</li>
-    <li><strong>Shuffle</strong> - Randomly selects the next track without repeating the current one</li>
-  </ul>
+        <h3>Search</h3>
+        <ul>
+          <li>Live search filters the current playlist as you type</li>
+          <li>Currently playing track always remains visible</li>
+          <li>Clear button instantly resets the search</li>
+        </ul>
 
-  <h3>Volume &amp; Mute</h3>
-  <ul>
-    <li>Volume slider with persistent state across sessions</li>
-    <li>Mute/unmute toggle with icon feedback</li>
-    <li>Volume and mute state saved to <code>localStorage</code></li>
-  </ul>
+        <h3>Player UI</h3>
+        <ul>
+          <li>Animated spinning vinyl artwork with loading glow</li>
+          <li>Scrolling marquee for long song titles</li>
+          <li>Mini player mode with swipe-to-expand support</li>
+          <li>Collapse/expand button always accessible</li>
+        </ul>
 
-  <h3>Song List &amp; Playlists</h3>
-  <ul>
-    <li>Filter tabs: <strong>All Songs</strong>, <strong>Recently Added</strong>, <strong>Rap</strong>, <strong>R&amp;B</strong>, <strong>Remix</strong>, <strong>Afrobeats</strong></li>
-    <li><strong>Favorites</strong> tab to save songs across sessions</li>
-    <li>Song duration displayed per track and cached after first scan</li>
-    <li>Active track highlighted and automatically scrolled into view</li>
-  </ul>
+        <h3>Swipe Gestures (Mobile)</h3>
+        <ul>
+          <li>Swipe left/right to skip tracks</li>
+          <li>Swipe down to collapse into mini player</li>
+          <li>Swipe up to expand the player</li>
+          <li>Velocity-based gesture detection</li>
+          <li>Interactive controls ignore swipe gestures</li>
+        </ul>
 
-  <h3>Search</h3>
-  <ul>
-    <li>Live search filters the current playlist as you type</li>
-    <li>Current playing track always remains visible</li>
-    <li>Clear button instantly resets the search</li>
-  </ul>
+        <h3>Downloads &amp; Offline</h3>
+        <ul>
+          <li>Download tracks through the player menu</li>
+          <li>Downloads stored in IndexedDB for offline playback</li>
+          <li>Downloaded songs play directly from local storage</li>
+          <li>Downloaded tracks display a download indicator</li>
+          <li>Dedicated Downloads view in the sidebar</li>
+        </ul>
 
-  <h3>Player UI</h3>
-  <ul>
-    <li>Animated spinning vinyl artwork with loading glow</li>
-    <li>Scrolling marquee for long song titles</li>
-    <li>Mini player mode with swipe-to-expand support</li>
-    <li>Collapse/expand button always accessible</li>
-  </ul>
+        <h3>Share</h3>
+        <ul>
+          <li>Share tracks from the player menu</li>
+          <li>Uses the native Web Share API on supported devices</li>
+          <li>Falls back to copying the link on desktop browsers</li>
+        </ul>
 
-  <h3>Swipe Gestures (Mobile)</h3>
-  <ul>
-    <li>Swipe left/right to skip tracks</li>
-    <li>Swipe down to collapse into mini player</li>
-    <li>Swipe up to expand the player</li>
-    <li>Velocity-based gesture detection</li>
-    <li>Interactive controls ignore swipe gestures</li>
-  </ul>
+        <h3>PWA &amp; Install</h3>
+        <ul>
+          <li>Installable on Android, Samsung Browser, Chrome, and iOS Safari</li>
+          <li>Native install banner on Android/Desktop</li>
+          <li>Step-by-step Add to Home Screen guide for iOS</li>
+          <li>Install prompt shown only once</li>
+          <li>Service Worker for offline caching and updates</li>
+          <li>Web App Manifest with icons, theme colour, and standalone mode</li>
+        </ul>
 
-  <h3>Downloads &amp; Offline</h3>
-  <ul>
-    <li>Download tracks through the player menu</li>
-    <li>Downloads stored in IndexedDB for offline playback</li>
-    <li>Downloaded songs play directly from local storage</li>
-    <li>Downloaded tracks display a download indicator</li>
-    <li>Dedicated Downloads view in the sidebar</li>
-  </ul>
+        <h3>Sidebar Navigation</h3>
+        <ul>
+          <li>Slide-in navigation drawer</li>
+          <li>Views: <strong>Home</strong>, <strong>Favorites</strong>, <strong>Downloads</strong>, <strong>About</strong></li>
+          <li>Tap outside the sidebar to close</li>
+          <li>About section pinned to the bottom with app icon, version, and developer credit</li>
+        </ul>
 
-  <h3>Share</h3>
-  <ul>
-    <li>Share tracks from the player menu</li>
-    <li>Uses the native Web Share API on supported devices</li>
-    <li>Falls back to copying the link on desktop browsers</li>
-  </ul>
+        <h3>Theme</h3>
+        <ul>
+          <li>Auto, Light, and Dark mode — follows system preference by default with manual override</li>
+          <li>Warm gold/brown accent colour</li>
+        </ul>
 
-  <h3>PWA &amp; Install</h3>
-  <ul>
-    <li>Installable on Android, Samsung Browser, Chrome, and iOS Safari</li>
-    <li>Native install banner on Android/Desktop</li>
-    <li>Step-by-step Add to Home Screen guide for iOS</li>
-    <li>Install prompt shown only once using <code>localStorage</code></li>
-    <li>Service Worker for offline caching and updates</li>
-    <li>Web App Manifest with icons, theme colour, and standalone mode</li>
-  </ul>
+        <hr>
 
-  <h3>Sidebar Navigation</h3>
-  <ul>
-    <li>Slide-in navigation drawer</li>
-    <li>Views: <strong>Home</strong>, <strong>Favorites</strong>, <strong>Downloads</strong>, <strong>About</strong></li>
-    <li>Tap outside the sidebar to close</li>
-    <li>About section pinned to the bottom with app icon, version, and developer credit</li>
-  </ul>
+        <h2>Developer</h2>
+        <p>
+          <strong>Abdul-Latif Ahmed (AlatiphA)</strong><br>
+          Blogger: <a href="https://alatipha.blogspot.com" target="_blank" rel="noopener">AlatiphA Multimedia</a>
+        </p>
+        <p>
+          <a href="mailto:alatipha@ymail.com" style="display:inline-flex;align-items:center;gap:6px;">
+            <i class="fa fa-envelope"></i> alatipha@ymail.com
+          </a>
+        </p>
 
-  <h3>Theme</h3>
-  <ul>
-    <li>Automatically switches between light and dark mode</li>
-    <li>Warm gold/brown accent colour</li>
-  </ul>
+        <footer style="margin-top:20px; font-size:12px; opacity:0.6;">
+          <p>&copy; 2026 | All Rights Reserved</p>
+        </footer>
 
-  <hr>
-
-  <h2>Developer</h2>
-
-  <p>
-    <strong>Abdul-Latif Ahmed (AlatiphA)</strong><br>
-    Blogger:
-    <a href="https://alatipha.blogspot.com" target="_blank" rel="noopener">
-      AlatiphA Multimedia
-    </a>
-  </p>
-
-  <p>
-    <button type="button">
-      <a href="mailto:alatipha@ymail.com">
-        <i class="fa fa-envelope"></i> Email
-      </a>
-    </button>
-  </p>
-
-  <footer>
-    <p>&copy; 2026 | All Rights Reserved</p>
-  </footer>
-</section>
-
-
-
-      
-
-      <p>Alatiphy is a progressive web app (PWA) music player for streaming and offline listening to AlatiphA's original tracks.</p>
-      <p>With Alatiphy, it’s easy to listen to tailored online and offline music on your phone, your computer, your tablet and many more devices.</p>
-      
-      <p>Alatiphy is a progressive web app (PWA) music player for streaming and offline listening to AlatiphA's original tracks.</p>
-      <p>With Alatiphy, it’s easy to listen to tailored online and offline music on your phone, your computer, your tablet and many more devices.</p>
-      
-      <p>Alatiphy is a progressive web app (PWA) music player for streaming and offline listening to AlatiphA's original tracks.</p>
-      <p>With Alatiphy, it’s easy to listen to tailored online and offline music on your phone, your computer, your tablet and many more devices.</p>
+      </section>
     </div>
   `;
 }

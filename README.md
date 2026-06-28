@@ -132,4 +132,4 @@ Audio hosted on [Internet Archive](https://archive.org).
 GitHub: [@AlatiphA](https://github.com/AlatiphA)
 Site: [alatipha.github.io](https://alatipha.github.io)
 
-© All Rights Reserved · 2026 Edition · v2.0.0
+© All Rights Reserved 
